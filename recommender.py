@@ -3,6 +3,7 @@ from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml.recommendation import ALS
 from pyspark.sql.functions import hash
 
+
 def main():
     spark = SparkSession \
         .builder \
@@ -11,22 +12,14 @@ def main():
 
     data = spark.read.json("./sample_data.json")
 
-    keep = [data.author, data.id, data.subreddit]
-    data = data.select(*keep)
+    cols_to_keep = [data.author, data.id, data.subreddit]
+    data = data.select(*cols_to_keep)
 
+    data = data.groupBy([data.author, data.subreddit]).count().orderBy(data.author)
     data = data.withColumn('author_id', hash(data.author))
     data = data.withColumn('subreddit_id', hash(data.subreddit))
-    # data.show(50)
 
-    subreddit_count = data.groupBy([data.author_id, data.subreddit_id]).count().orderBy(data.author_id)
-
-    #subreddit_count.show(50)
-    #
-    # # parts = lines.map(lambda row: row.value.split("::"))
-    # # ratingsRDD = parts.map(lambda p: Row(userId=int(p.author), itemId=int(p[1]),
-    # #                                      rating=float(p[2]), timestamp=int(p[3])))
-    ratings = subreddit_count
-    (training, test) = ratings.randomSplit([0.8, 0.2])
+    (training, test) = data.randomSplit([0.8, 0.2])
 
     als = ALS(maxIter=5, rank=70, regParam=0.01, userCol="author_id", itemCol="subreddit_id", ratingCol="count",
               coldStartStrategy="drop", implicitPrefs=True)
@@ -36,11 +29,42 @@ def main():
     evaluator = RegressionEvaluator(metricName="rmse", labelCol="count",
                                     predictionCol="prediction")
     rmse = evaluator.evaluate(predictions)
-    print(str(rmse))
-    predictions.show(50)
+    print('Root mean squared error: ' + str(rmse))
 
-    userRecs = model.recommendForAllUsers(10)
-    userRecs.show()
+    users = data.select(als.getUserCol()).distinct().limit(3)
+    user_subset_recs = model.recommendForUserSubset(users, 5)
+
+    subreddit_recs = {}
+
+    for row in user_subset_recs.collect():
+        author = get_author_from_id(data, row['author_id'])
+        subreddit_recs[author] = []
+        for rec in row['recommendations']:
+            subreddit_recs[author].append(get_subreddit_from_id(data, rec[0]))
+
+    for author in subreddit_recs.keys():
+        print('Recommendations for user ' + author)
+        for rec in subreddit_recs[author]:
+            print(rec)
+        print()
+
+
+def get_subreddit_from_id(df, subreddit_id):
+    df_copy = df.filter(df.subreddit_id == subreddit_id)
+    if df_copy.select(df.subreddit).collect():
+        subreddit = df_copy.select(df.subreddit).collect()[0][0]
+    else:
+        subreddit = 'null'
+    return subreddit
+
+
+def get_author_from_id(df, author_id):
+    df_copy = df.filter(df.author_id == author_id)
+    if df_copy.select(df.author).collect():
+        author = df_copy.select(df.author).collect()[0][0]
+    else:
+        author = 'null'
+    return author
 
 
 main()
