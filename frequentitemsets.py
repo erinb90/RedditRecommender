@@ -37,7 +37,7 @@ def main():
     data = data.filter(size_(data.items) > 1)
     data = data.select(data.items)
     support = 200/data.count()
-    fp = FPGrowth(minSupport=support, minConfidence=0.1)
+    fp = FPGrowth(minSupport=support, minConfidence=0.5)
     fpm = fp.fit(data)
     fpm.associationRules.show(100)
 
