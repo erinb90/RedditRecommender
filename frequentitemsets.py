@@ -36,7 +36,7 @@ def main():
     size_ = udf(lambda xs: len(xs), IntegerType())
     data = data.filter(size_(data.items) > 1)
     data = data.select(data.items)
-    support = 20/data.count()
+    support = 200/data.count()
     fp = FPGrowth(minSupport=support, minConfidence=0.1)
     fpm = fp.fit(data)
     fpm.associationRules.show(100)
