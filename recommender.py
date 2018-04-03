@@ -1,7 +1,7 @@
 from pyspark.sql import SparkSession
 from pyspark.ml.evaluation import RegressionEvaluator
 from pyspark.ml.recommendation import ALS
-from pyspark.sql.functions import hash
+from pyspark.sql.functions import hash, udf
 
 
 def main():
@@ -14,6 +14,20 @@ def main():
 
     cols_to_keep = [data.author, data.id, data.subreddit]
     data = data.select(*cols_to_keep)
+    data = data.filter(data.author != "[deleted]")
+
+    @udf("boolean")
+    def isNotDefault(x):
+        defaultSubs = ["Art", "AskReddit", "DIY", "Documentaries", "EarthPorn", "Futurology", "GetMotivated", "IAmA",
+                       "InternetIsBeautiful", "Jokes", "LifeProTips", "Music", "OldSchoolCool", "Showerthoughts",
+                       "UpliftingNews", "announcements", "askscience", "aww", "blog", "books", "creepy",
+                       "dataisbeautiful", "explainlikeimfive", "food", "funny", "gadgets", "gaming", "gifs", "history",
+                       "listentothis", "mildlyinteresting", "movies", "news", "nosleep", "nottheonion",
+                       "personalfinance", "philosophy", "photoshopbattles", "pics", "science", "space", "sports",
+                       "television", "tifu", "todayilearned", "videos", "worldnews"]
+        return x not in defaultSubs
+
+    data = data.filter(isNotDefault(data.subreddit))
 
     data = data.groupBy([data.author, data.subreddit]).count().orderBy(data.author)
     data = data.withColumn('author_id', hash(data.author))
