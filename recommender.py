@@ -10,7 +10,12 @@ def main():
         .appName("RedditRecommender") \
         .getOrCreate()
 
-    data = spark.read.json("./sample_data.json")
+    output_file = open("als-output.txt", "w")
+
+    spark.sparkContext.setCheckpointDir('gs://redditrecommender/checkpoint/')
+
+    #data = spark.read.json('./sample_data.json')
+    data = spark.read.json("gs://redditrecommender/RC_2018-02.json")
 
     cols_to_keep = [data.author, data.id, data.subreddit]
     data = data.select(*cols_to_keep)
@@ -43,10 +48,12 @@ def main():
     evaluator = RegressionEvaluator(metricName="rmse", labelCol="count",
                                     predictionCol="prediction")
     rmse = evaluator.evaluate(predictions)
-    print('Root mean squared error: ' + str(rmse))
+    output_file.write('Root mean squared error: ' + str(rmse) + '\n\n')
 
-    users = data.select(als.getUserCol()).distinct().limit(3)
-    user_subset_recs = model.recommendForUserSubset(users, 5)
+    users = data.select(als.getUserCol()).distinct().limit(100)
+    user_subset_recs = model.recommendForUserSubset(users, 10)
+
+    user_subset_recs.save("gs://redditrecommender/als-results")
 
     subreddit_recs = {}
 
@@ -57,10 +64,11 @@ def main():
             subreddit_recs[author].append(get_subreddit_from_id(data, rec[0]))
 
     for author in subreddit_recs.keys():
-        print('Recommendations for user ' + author)
+        output_file.write('Top 10 recommendations for user ' + author + ':\n')
         for rec in subreddit_recs[author]:
-            print(rec)
-        print()
+            output_file.write(rec)
+            output_file.write('\n')
+        output_file.write('\n')
 
 
 def get_subreddit_from_id(df, subreddit_id):
