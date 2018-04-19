@@ -18,7 +18,7 @@ def main():
         defaultSubs = ["Art", "AskReddit", "DIY", "Documentaries", "EarthPorn", "Futurology", "GetMotivated", "IAmA", "InternetIsBeautiful", "Jokes", "LifeProTips", "Music", "OldSchoolCool", "Showerthoughts", "UpliftingNews", "announcements", "askscience", "aww", "blog", "books", "creepy", "dataisbeautiful", "explainlikeimfive", "food", "funny", "gadgets", "gaming", "gifs", "history", "listentothis", "mildlyinteresting", "movies", "news", "nosleep", "nottheonion", "personalfinance", "philosophy", "photoshopbattles", "pics", "science", "space", "sports", "television", "tifu", "todayilearned", "videos", "worldnews"]
         return x not in defaultSubs
     
-    data = spark.read.json("gs://reddit_data_soen498/RC_2018-01.json")
+    data = spark.read.json("gs://reddit_data_soen498/RC_2018-02.json")
     keep = [data.author, data.id, data.subreddit]
     data = data.select(*keep)
     data = data.filter(data.author != "[deleted]")
