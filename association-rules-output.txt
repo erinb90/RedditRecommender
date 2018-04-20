@@ -1,0 +1,103 @@
+|antecedent                                                                              |consequent            |confidence        |
++----------------------------------------------------------------------------------------+----------------------+------------------+
+|[BitGrailExchange, nanotrade, CryptoCurrency]                                           |[nanocurrency]        |0.9590909090909091|
+|[sgsflair]                                                                              |[SteamGameSwap]       |0.9560229445506692|
+|[ARCARacing]                                                                            |[NASCAR]              |0.9506578947368421|
+|[CryptoCurrencyMeta]                                                                    |[CryptoCurrency]      |0.9444444444444444|
+|[LowTierTradingRL]                                                                      |[RocketLeagueExchange]|0.9395973154362416|
+|[SpoiledDragRace]                                                                       |[rupaulsdragrace]     |0.9377233282286881|
+|[FashionRepsBST, DesignerReps, Repsneakers]                                             |[FashionReps]         |0.9324324324324325|
+|[GoneMild, gonewild30plus, PetiteGoneWild]                                              |[gonewild]            |0.9273504273504274|
+|[RealGirls, gonewild30plus, PetiteGoneWild]                                             |[gonewild]            |0.9223744292237442|
+|[BitGrailExchange, nanotrade]                                                           |[nanocurrency]        |0.9215686274509803|
+|[SeriousFIFA]                                                                           |[FIFA]                |0.9148533585619678|
+|[gonewild30plus, AsiansGoneWild, PetiteGoneWild]                                        |[gonewild]            |0.9143730886850153|
+|[SeriousFIFA, soccer]                                                                   |[FIFA]                |0.9142857142857143|
+|[CryptoMarkets, ethereum, ethtrader]                                                    |[CryptoCurrency]      |0.9128630705394191|
+|[IGSRep]                                                                                |[indiegameswap]       |0.9120287253141831|
+|[CryptoMarkets, nanocurrency, Bitcoin]                                                  |[CryptoCurrency]      |0.9112903225806451|
+|[NFL_Draft, baseball]                                                                   |[nfl]                 |0.9106382978723404|
+|[ethereum, nanocurrency, Bitcoin]                                                       |[CryptoCurrency]      |0.9090909090909091|
+|[LowTierTradingRL, RocketLeague]                                                        |[RocketLeagueExchange]|0.9078947368421053|
+|[BGinsolvency, CryptoCurrency]                                                          |[nanocurrency]        |0.9051383399209486|
+|[nanocurrency, ethtrader, Bitcoin]                                                      |[CryptoCurrency]      |0.9044117647058824|
+|[esist, PoliticalHumor, AdviceAnimals, technology, BlackPeopleTwitter]                  |[politics]            |0.9036144578313253|
+|[Flexicas, Repsneakers]                                                                 |[FashionReps]         |0.9014598540145985|
+|[TheCannalysts]                                                                         |[weedstocks]          |0.9005847953216374|
+|[CryptoTechnology, nanocurrency]                                                        |[CryptoCurrency]      |0.9               |
+|[gonewildcurvy, gonewild30plus, PetiteGoneWild]                                         |[gonewild]            |0.896414342629482 |
+|[esist, WhitePeopleTwitter, technology, BlackPeopleTwitter]                             |[politics]            |0.8958333333333334|
+|[CryptoMarkets, ethereum, Bitcoin]                                                      |[CryptoCurrency]      |0.8945454545454545|
+|[esist, PoliticalHumor, technology, BlackPeopleTwitter, WTF]                            |[politics]            |0.8942731277533039|
+|[BlueMidterm2018, esist, BlackPeopleTwitter]                                            |[politics]            |0.8942307692307693|
+|[Dragula]                                                                               |[rupaulsdragrace]     |0.8930131004366813|
+|[EnoughTrumpSpam, atheism, BlackPeopleTwitter]                                          |[politics]            |0.8917910447761194|
+|[esist, AdviceAnimals, technology, BlackPeopleTwitter]                                  |[politics]            |0.89171974522293  |
+|[NEO, ethtrader, Bitcoin]                                                               |[CryptoCurrency]      |0.8916666666666667|
+|[EnoughTrumpSpam, esist, MurderedByWords, PoliticalHumor]                               |[politics]            |0.8893617021276595|
+|[esist, PoliticalHumor, pcmasterrace]                                                   |[politics]            |0.8878205128205128|
+|[ForFashion]                                                                            |[forhonor]            |0.8874734607218684|
+|[esist, WhitePeopleTwitter, PoliticalHumor, WTF]                                        |[politics]            |0.8867924528301887|
+|[GoneMild, AsiansGoneWild, PetiteGoneWild]                                              |[gonewild]            |0.8865546218487395|
+|[Vechain, CryptoMarkets]                                                                |[CryptoCurrency]      |0.8863636363636364|
+|[esist, technology, BlackPeopleTwitter, WTF]                                            |[politics]            |0.8859934853420195|
+|[EnoughTrumpSpam, AdviceAnimals, BlackPeopleTwitter, WTF]                               |[politics]            |0.8846153846153846|
+|[esist, atheism, PoliticalHumor, BlackPeopleTwitter]                                    |[politics]            |0.8844621513944223|
+|[GoneWildSmiles, gonewild30plus]                                                        |[gonewild]            |0.8842975206611571|
+|[esist, technology, BlackPeopleTwitter, interestingasfuck]                              |[politics]            |0.8835341365461847|
+|[esist, atheism, PoliticalHumor, WTF]                                                   |[politics]            |0.8832684824902723|
+|[EnoughTrumpSpam, esist, PoliticalHumor, BlackPeopleTwitter]                            |[politics]            |0.8828451882845189|
+|[esist, PoliticalHumor, AdviceAnimals, technology, WTF]                                 |[politics]            |0.8826086956521739|
+|[RS3Ironmen]                                                                            |[runescape]           |0.8825910931174089|
+|[atheism, PoliticalHumor, AdviceAnimals, technology, BlackPeopleTwitter]                |[politics]            |0.8825910931174089|
+|[EnoughTrumpSpam, PoliticalHumor, AdviceAnimals, BlackPeopleTwitter]                    |[politics]            |0.8823529411764706|
+|[esist, facepalm, MurderedByWords, PoliticalHumor]                                      |[politics]            |0.8818565400843882|
+|[WhitePeopleTwitter, PoliticalHumor, AdviceAnimals, technology, BlackPeopleTwitter, WTF]|[politics]            |0.8816326530612245|
+|[esist, atheism, PoliticalHumor, AdviceAnimals]                                         |[politics]            |0.8796992481203008|
+|[esist, insanepeoplefacebook, PoliticalHumor, AdviceAnimals]                            |[politics]            |0.8796680497925311|
+|[esist, PoliticalHumor, AdviceAnimals, technology]                                      |[politics]            |0.8795180722891566|
+|[esist, insanepeoplefacebook, PoliticalHumor, technology]                               |[politics]            |0.87890625        |
+|[esist, WhitePeopleTwitter, PoliticalHumor, technology]                                 |[politics]            |0.8788927335640139|
+|[esist, PoliticalHumor, technology, BlackPeopleTwitter]                                 |[politics]            |0.8784810126582279|
+|[esist, MurderedByWords, insanepeoplefacebook, PoliticalHumor]                          |[politics]            |0.8779527559055118|
+|[esist, AdviceAnimals, BlackPeopleTwitter, interestingasfuck]                           |[politics]            |0.8778625954198473|
+|[GWCouples, PetiteGoneWild]                                                             |[gonewild]            |0.8774928774928775|
+|[atheism, PoliticalHumor, technology, BlackPeopleTwitter, WTF]                          |[politics]            |0.8771186440677966|
+|[esist, starterpacks, PoliticalHumor, AdviceAnimals]                                    |[politics]            |0.8771186440677966|
+|[BlueMidterm2018, PoliticalHumor, AdviceAnimals, BlackPeopleTwitter]                    |[politics]            |0.8769230769230769|
+|[atheism, PoliticalHumor, AdviceAnimals, BlackPeopleTwitter, WTF]                       |[politics]            |0.8760330578512396|
+|[esist, The_Mueller, PoliticalHumor, WTF]                                               |[politics]            |0.875             |
+|[LateStageCapitalism, PoliticalHumor, AdviceAnimals, WTF]                               |[politics]            |0.875             |
+|[esist, MurderedByWords, AdviceAnimals, BlackPeopleTwitter]                             |[politics]            |0.8744939271255061|
+|[supergirlTV, LegendsOfTomorrow, arrow]                                                 |[FlashTV]             |0.8744769874476988|
+|[esist, atheism, trashy]                                                                |[politics]            |0.8744588744588745|
+|[MarchAgainstTrump, BlueMidterm2018, esist]                                             |[politics]            |0.8739837398373984|
+|[The_Congress]                                                                          |[The_Donald]          |0.8739495798319328|
+|[13451452251849519]                                                                     |[milliondollarextreme]|0.8731343283582089|
+|[RussiaLago, esist, PoliticalHumor]                                                     |[politics]            |0.8729281767955801|
+|[esist, PoliticalHumor, AdviceAnimals, BlackPeopleTwitter]                              |[politics]            |0.8727272727272727|
+|[gonewild30plus, wifesharing, PetiteGoneWild]                                           |[gonewild]            |0.87248322147651  |
+|[nanotrade, CryptoCurrency]                                                             |[nanocurrency]        |0.8721311475409836|
+|[esist, atheism, technology, WTF]                                                       |[politics]            |0.872             |
+|[BlueMidterm2018, esist, MurderedByWords]                                               |[politics]            |0.8715953307392996|
+|[esist, AdviceAnimals, BlackPeopleTwitter, WTF]                                         |[politics]            |0.8715277777777778|
+|[esist, atheism, MurderedByWords]                                                       |[politics]            |0.8715277777777778|
+|[esist, MadeMeSmile, PoliticalHumor]                                                    |[politics]            |0.8714859437751004|
+|[MonsterHunterMeta]                                                                     |[MonsterHunter]       |0.8714285714285714|
+|[esist, PoliticalHumor, AdviceAnimals, WTF]                                             |[politics]            |0.8714285714285714|
+|[esist, MurderedByWords, PoliticalHumor, AdviceAnimals]                                 |[politics]            |0.8713826366559485|
+|[esist, The_Mueller, MurderedByWords, PoliticalHumor]                                   |[politics]            |0.87109375        |
+|[oldschoolrs]                                                                           |[2007scape]           |0.8707782672540382|
+|[TrumpCriticizesTrump, esist, technology]                                               |[politics]            |0.8706896551724138|
+|[esist, MurderedByWords, PoliticalHumor, BlackPeopleTwitter]                            |[politics]            |0.8704225352112676|
+|[BinanceExchange, nanocurrency, Bitcoin]                                                |[CryptoCurrency]      |0.8701298701298701|
+|[esist, The_Mueller, WTF]                                                               |[politics]            |0.8689458689458689|
+|[esist, PoliticalHumor, BlackPeopleTwitter, WTF]                                        |[politics]            |0.8688524590163934|
+|[nanotrade, Bitcoin, CryptoCurrency]                                                    |[nanocurrency]        |0.8681318681318682|
+|[EnoughTrumpSpam, esist, BlackPeopleTwitter]                                            |[politics]            |0.8680981595092024|
+|[esist, atheism, AdviceAnimals, technology]                                             |[politics]            |0.8680851063829788|
+|[esist, WhitePeopleTwitter, PoliticalHumor, AdviceAnimals]                              |[politics]            |0.8677966101694915|
+|[esist, atheism, PoliticalHumor, technology]                                            |[politics]            |0.867595818815331 |
+|[esist, MurderedByWords, technology, BlackPeopleTwitter]                                |[politics]            |0.8675213675213675|
+|[esist, MurderedByWords, PoliticalHumor, technology]                                    |[politics]            |0.8675078864353313|
++----------------------------------------------------------------------------------------+----------------------+------------------+
